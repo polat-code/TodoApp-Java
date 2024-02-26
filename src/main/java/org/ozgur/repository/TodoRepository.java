@@ -7,6 +7,7 @@ import org.ozgur.model.MediumTodo;
 import org.ozgur.model.Todo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -95,7 +96,7 @@ public class TodoRepository {
         filterMediumTodo(mediumTodoList);
         List<Todo> highTodoList = new ArrayList<>();
         filterHighTodo(highTodoList);
-        List<Todo>[] categorizedTodo = {lowTodoList,mediumTodoList,highTodoList};
+        List<List<Todo>> categorizedTodo = Arrays.asList(lowTodoList,mediumTodoList,highTodoList);
         return categorizedTodo;
     }
 }

@@ -14,7 +14,7 @@ public interface TodoService {
 
     List<Todo> getAllTodosByPriority(String priority);
 
-    List<Todo>[] categorizeAllTodosByPriority();
+    List<List<Todo>> categorizeAllTodosByPriority();
 
     void sendNotification(Todo todo, NotificationService notificationService);
 
