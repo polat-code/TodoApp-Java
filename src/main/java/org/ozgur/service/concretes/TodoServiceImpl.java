@@ -7,6 +7,7 @@ import org.ozgur.service.abstracts.TodoService;
 
 import java.sql.SQLOutput;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class TodoServiceImpl implements TodoService {
@@ -46,22 +47,41 @@ public class TodoServiceImpl implements TodoService {
 
     @Override
     public List<List<Todo>> categorizeAllTodosByPriority() {
-        // [lowTodoList, mediumTodoList, HighTodoList]
         return todoRepository.categorizeAllTodosByPriority();
     }
 
     @Override
     public void sendNotification(Todo todo, NotificationService notificationService) {
+        try{
+            notificationService.sendNotification(todo);
+        }catch (Exception e) {
+            throw new IllegalArgumentException();
+        }
 
     }
 
     @Override
-    public void updateTodoById(Long id, Todo todo) {
+    public void updateTodoById(Long id, Todo newVersionTodo) {
+        try {
+            Todo updatedTodo = todoRepository.getTodoById(id);
+            updatedTodo.setTitle(newVersionTodo.getTitle());
+            updatedTodo.setDescription(newVersionTodo.getDescription());
+            updatedTodo.setUpdatedAt(new Date());
+            updatedTodo.setStatus(newVersionTodo.getStatus());
+        }catch (Exception e) {
+            System.out.println("Illegal Todo id in updateTodoById() method");
+        }
 
     }
 
     @Override
     public void deleteTodoById(Long id) {
+        try {
+            Todo todo = getTodoById(id);
+            todoRepository.getAllTodos().remove(todo);
+        }catch (Exception e) {
+            System.out.println("Illegal Todo id in deleteTodoById() method");
+        }
 
     }
 }

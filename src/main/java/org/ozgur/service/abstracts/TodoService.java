@@ -18,7 +18,7 @@ public interface TodoService {
 
     void sendNotification(Todo todo, NotificationService notificationService);
 
-    void updateTodoById(Long id, Todo todo);
+    void updateTodoById(Long id, Todo updatedTodo);
 
     void deleteTodoById(Long id);
 
