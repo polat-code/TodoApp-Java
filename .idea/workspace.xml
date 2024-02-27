@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb9304e1-5521-4c00-844c-266f44fc03e9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ozgur/ui/abstracts/Component.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ozgur/ui/concretes/CreateTodoComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ozgur/service/abstracts/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ozgur/service/abstracts/TodoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ozgur/service/concretes/TodoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ozgur/service/concretes/TodoServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="eb9304e1-5521-4c00-844c-266f44fc03e9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1708881825516</updated>
       <workItem from="1708881827535" duration="5605000" />
-      <workItem from="1708934421188" duration="12814000" />
+      <workItem from="1708934421188" duration="12903000" />
     </task>
     <servers />
   </component>
